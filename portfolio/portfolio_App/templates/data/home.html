@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+
+{% endblock title %}
+
+{% block body %}
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<style>
+    .main{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 6vw 0vw;
+      }
+      .maintxt{
+        font-size: 3vw;
+        font-family: "Playwrite ES Deco", cursive;
+      }
+      .maintxt strong{
+          color: #02DBE4; 
+      }
+      
+      .move{
+        background-color: lawngreen;
+        display: flex;
+        /* padding: 2vw 0; */
+        
+      }
+      .move h1{
+        font-size: 3vw;
+      }
+      .marque{
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        padding: 0 1.5vw;
+        transform: translateX("-100%");
+      }
+      .marque img{
+        height: 2.8vw;
+      }
+      
+      #scrolltxt{
+        height: 100vh;
+        width: 100%;  
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+      }
+      
+      #scrolltxt h1{
+        font-size: 20vw;
+        font-weight: 800;
+        white-space: nowrap;
+        
+      }
+      #about{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 4vw;
+      }
+      .abouttxt strong{
+        color: #02DBE4;
+      }
+      
+      .Skill{
+        padding: 3vw;
+      }
+      .Skill h1{
+        text-align: center;
+      }
+      
+      
+      
+      .projects{
+        padding: 3vw;
+      }
+</style>
+  
+  <!-- <div id="loader">
+    <h1>0%</h1>
+</div> -->
+
+  <div class="main">
+    <div class="maintxt">Hello,It's <br>Me Premsukh Goyal <br>And I'm a <strong> Web Developer</strong></div>
+    <div class="mainimg"><img
+        src="C:\Users\HP\MR.PREM\IMG-20221229-WA0016.jpg"
+        alt="" height="250px" width="250px"></div>
+  </div>
+
+
+
+
+  <div class="move">
+    <div class="marque">
+      <h1>A full Stack Developer</h1>
+      <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+        alt="Creative Branding and Webdesign Agency Amsterdam">
+    </div>
+
+    <div class="marque">
+      <h1>A full Stack Developer</h1>
+      <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+        alt="Creative Branding and Webdesign Agency Amsterdam">
+    </div>
+    <div class="marque">
+      <h1>A full Stack Developer</h1>
+      <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+        alt="Creative Branding and Webdesign Agency Amsterdam">
+    </div>
+    <div class="marque">
+      <h1>A full Stack Developer</h1>
+      <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+        alt="Creative Branding and Webdesign Agency Amsterdam">
+    </div>
+    <div class="marque">
+      <h1>A full Stack Developer</h1>
+      <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+        alt="Creative Branding and Webdesign Agency Amsterdam">
+    </div>
+  </div>
+
+
+  <div id="scrolltxt">
+    <h1>A passionate Human And Coder</h1>
+  </div>
+
+  <div id="about" class="about">
+    <div class="abouttxt">
+      <p>Hi, I'm <strong>Premsukh Goyal</strong> at the age of 19 years old.I'am from Bikaner but I am currently living
+        in Jaipur for my
+        study and build a good carier.
+        I am pursuing <strong>BCA</strong> in S.S Jain Subbodh of Global Excellance College in Jaipur.</p>
+      <br>
+      <p>I'm a <strong>full stack web developer</strong> with building robust web
+        applications. My expertise lies in both front-end and back-end development, using technologies such as HTML,
+        CSS, JavaScript, Jquery, Bootstrap, Gsap, Python, Sql, Django.</p>
+      <br>
+      <p>I am always a front bencher's in anywhere because i am sincerly student way to learn & completed my study.</p>
+      <br>
+      <p>I am passionate about continuous learning and staying updated with the latest industry trends to deliver the
+        best possible results. In my free time, I enjoy to know about mysterious thing I liked to know in old time
+        happen, and loves to all(south movies,travell,riding,singing).</p>
+      <br>
+      <p>Feel free to explore my projects and reach out if you'd like to collaborate or learn more about my work.</p>
+    </div>
+    <div class="aboutimg">
+      <img
+        src="C:\Users\HP\MR.PREM\IMG-20221229-WA0016.jpg"
+        alt="" height="250px" width="250px">
+    </div>
+  </div>
+
+
+  <div class="projects">
+    <div class="first">
+      <h1>Locomotive-Denified <a href="https://premgoyal09.github.io/GSAP-LOCOMOTIVE-PROJECT/">URL</a> </h1>      
+      <iframe src="https://premgoyal09.github.io/GSAP-LOCOMOTIVE-PROJECT/" height="100%" width="100%"></iframe>
+    </div>
+    <br>
+    <div class="first">
+      <h1>Roxima-website <a href="https://premgoyal09.github.io/Roxima-website-/">URL</a></h1>      
+      <iframe src="https://premgoyal09.github.io/Roxima-website-/" height="100%" width="100%"></iframe>
+    </div>
+    <br>
+    <div class="first">
+      <h1>Eclipse.org <a href="http://www.cloneeclipse.com/">URL</a></h1>      
+      <iframe src="http://www.cloneeclipse.com/" height="100%" width="100%"></iframe>
+    </div>
+    <div class="first">
+      <h1>cosmos-Consulting-Clone <a href="https://github.com/premgoyal09/cosmos-Consulting/settings/pages">URL</a></h1>      
+      <iframe src="https://github.com/premgoyal09/cosmos-Consulting/settings/pages" height="100%" width="100%"></iframe>
+    </div>
+    <div class="first">
+      <h1>Eat-Curious <a href="https://github.com/premgoyal09/Ear-curious">URL</a></h1>      
+      <iframe src="https://github.com/premgoyal09/Ear-curious" height="100%" width="100%"></iframe>
+    </div>
+  </div>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <script>
+    // for loader
+    var tl =gsap.timeline()
+    
+    function time(){
+      var a=  0;
+      setInterval(function(){
+        a= a + Math.floor(Math.random()*20)
+        if (a<100){
+          document.querySelector("#loader h1").innerHTML=a+"%"
+        }
+        else {
+          a = 100
+          document.querySelector("#loader h1").innerHTML = a+"%"
+        }
+        document.querySelector("#loader h1").innerHTML=a+"%"
+        console.log(a)
+      },150)
+    }
+    time()
+    
+    
+    
+    tl.to("#loader h1", {
+      scale:1.5,   
+      delay:0.5,
+    duration:1,
+    onStart:time()
+  })
+  
+  gsap.to("#loader", {
+    top:"-100vh",
+    delay:2,
+    duration:2.5,
+  })
+  
+  
+  
+  
+  
+  window.addEventListener("wheel",function(dets){
+    if(dets.deltaY > 0){
+      gsap.to(".marque",{
+        transform:'translateX(-200%)',
+        duration:2,
+        repeat:-1,
+        ease:"none"
+      })
+      gsap.to(".marque img",{
+        rotate:180
+      })
+    } 
+    else{
+      gsap.to(".marque",{
+        transform:'translateX(0%)',
+        duration:2,
+        repeat:-1,
+        ease:"none"
+        
+      })  
+      gsap.to(".marque img",{
+        rotate:0
+      })
+    }
+  })
+  
+
+  gsap.to("#scrolltxt h1",{
+    transform:"translateX(-178vw)",
+    scrollTrigger:{
+      trigger:"#scrolltxt",
+      scroller:"body",
+      markers:false,
+      start:"top 0%",
+      end:"top -150%",
+      scrub:1,
+      pin:true
+    }
+  })
+</script>
+  
+  
+  
+  
+  
+{% endblock  %}

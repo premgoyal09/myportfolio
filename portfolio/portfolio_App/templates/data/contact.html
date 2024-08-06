@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+<head>
+    
+</head>
+<style>
+    .userform{
+        background-color:alicebluea;
+    }
+    .btn{
+        color: black;
+        background-color: antiquewhite;
+    }
+    .social{
+        padding: 8vw;
+    }
+</style>
+<div class="container">
+    <div class="userform">
+
+        <h1>Contact me</h1>
+        <form action="/contact" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-lable">Name: </label>
+                <input type="text" name="name" id="name" placeholder="enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-lable">Email: </label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-lable">Mobile Number: </label>
+                <input type="number" name="phone" id="phone">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-lable">Message: </label>
+                <textarea class="form-control" name="content" id="content"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    </div>
+
+    <div class="social">
+        <h1>My social media account</h1>
+        <div class="detl">
+            <h5>Contact Details:  9511375101</h5>
+        </div>
+        
+        <div class="detl">
+            <h5>Email address: premsukhgoyal7@gmail.com</h5>
+        </div>
+        
+        <div class="detl">
+
+            <h5>Linkdin: <a href="/linkdin">account</a></h5>
+        </div>
+        
+        <div class="detl">
+            <h5>Git Hub <a href="https://github.com/premgoyal09/">account</a></h5>
+        </div>
+        
+        <div class="detl">
+            <h5></h5>
+        </div>
+
+    </div>
+    {% endblock  %}

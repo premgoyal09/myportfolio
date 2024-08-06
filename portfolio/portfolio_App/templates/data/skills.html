@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+<style>
+     
+.skills{
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    gap: 7vw;
+}
+@media (max-width:'768px') {
+    .skills{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.progress{
+    padding: 4vw;
+    gap: 2vw;
+    background-color: black;
+}
+
+.progress2{
+    padding: 4vw;
+    gap: 2vw;
+    background-color: black;
+}
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 30px; /* Adjust the height as needed */
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #22ff00; /* Green color */
+    transition: width 0.4s ease; /* Smooth transition */
+}
+
+</style>
+<div class="skills">
+    <div class="soft">
+        <h1>SOFT Skills:
+        </h1>
+        Be-Keeping,Be-aware,Humannity
+    </div>
+    <div class="tech">
+        <h1>Soft Skills:
+
+        </h1>
+        Web Designer
+        <br>
+        Frontned Developer
+        <br>
+        Backned Developer
+        <br>
+        UI/UX Designer
+        <br>
+        Web Developer
+        <br>
+        Python Developer
+        <br>
+    </div>
+</div>
+
+
+<div class="progress">
+    <p>proficient in all</p>
+    <br>
+    <h1>HTML5</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barh"></div>
+    </div>
+    <br>
+    <h1>CSS3</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barc"></div>
+    </div>
+    <br>
+    <h1>JavaScript</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barj"></div>
+    </div>
+    <br>
+    <h1>Bootstrap</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barb"></div>
+    </div>
+    <br>
+    <h1>Jquery</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barq"></div>
+    </div>
+</div>
+</div>
+    <br>
+    <div class="progress2">
+    <h1>Gsap</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barg"></div>
+    </div>
+    <br>
+    <h1>Python</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-barp"></div>
+    </div>
+    <br>
+    <h1>Sql</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bars"></div>
+    </div>
+    <br>
+    <h1>Django</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bard"></div>
+    </div>
+
+</div>
+<script>
+    function setProgress(id, percentage) {
+        const progressBar = document.getElementById(id);
+        if (progressBar) {
+            progressBar.style.width = percentage + '%';
+        }
+    }
+    
+    // Set progress for each item
+    setProgress('progress-barh', 90); // HTML5
+    setProgress('progress-barc', 90); // CSS3
+    setProgress('progress-barj', 65); // JavaScript
+    setProgress('progress-barb', 90); // Bootstrap
+    setProgress('progress-barq', 80); // jQuery
+    setProgress('progress-barg', 70); // GSAP
+    setProgress('progress-barp', 65); // Python
+    setProgress('progress-bars', 55); // SQL
+    setProgress('progress-bard', 90); // Django
+    
+</script>
+
+{% endblock  %}

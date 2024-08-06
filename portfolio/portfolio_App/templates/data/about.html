@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<style>
+    #main{
+        height: 100%;
+        width: 100%;
+        background-color: #6600ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cursor{
+        height: 22px;
+        width: 22px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 9;
+    }
+    #image{
+        height: 30vw;
+        width: 50vw;
+        background-color: red;
+        position: relative;
+    }
+    #image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    #overlay{
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+    }
+    .marque{
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        padding: 0 1.5vw;
+        transform: translateX("-100%");
+    }
+    .marque img{
+        height: 2.8vw;
+    }
+    
+    #scrolltxt{
+        height: 100vh;
+        width: 100%;  
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+    }
+    
+    #about{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 4vw;
+    }
+    .abouttxt strong{
+        color: #02DBE4;
+    }
+    
+</style>
+
+<!-- <div id="loader">
+  <h1>0%</h1>
+</div> -->
+
+<div id="cursor"></div>
+<div id="main">
+    <div id="image">
+        <div id="overlay"></div>
+        <img src="https://images.pexels.com/photos/1149694/pexels-photo-1149694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+    </div>
+</div>
+
+<div id="about">
+    <div class="abouttxt">
+        <p>Hi, I'm <strong>Premsukh Goyal</strong> at the age of 19 years old.I'am from Bikaner but I am currently living
+          in Jaipur for my
+          study and build a good carier.
+          I am pursuing <strong>BCA</strong> in S.S Jain Subbodh of Global Excellance College in Jaipur.</p>
+          <br>
+          <p>I have last year to made <strong>strong Foundation</strong> of Full stack Developer at Samyak Compuetr pvt.ltd</p>
+          <br>
+    <p>I'm a <strong>full stack web developer</strong> with building robust web
+      applications. My expertise  in both front-end and back-end development, using technologies such as Web technologies.</p>
+    <br>
+    <p>I am clearly Say i am passionate and good human nature and to helping another person with also i am fully aptitude man.</p>
+    <br>
+    <p>I am always a front bencher's in anywhere because i am sincerly student way to learn & completed my study.</p>
+    <br>
+    <p>I am passionate about continuous learning and staying updated with the latest industry trends to deliver the
+      best possible results. In my free time, I enjoy to know about mysterious thing I liked to know in old time
+      happen, and loves to all(Rain,travell,riding,singing).</p>
+    <br>
+    <p>Feel free to explore my projects and reach out if you'd like to collaborate or learn more about my work.</p>
+  </div>
+  <div class="aboutimg">
+    <img
+      src="C:\Users\HP\MR.PREM\IMG-20221229-WA0016.jpg"
+      alt="" height="250px" width="250px">
+  </div>
+</div>
+</div>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center">
+            <h1>Premsukh Goyal's Resume</h1>
+            <p>Download my resume</p>
+            <a href="file:///C:/Users/HP/Desktop/TRY%20THIS/DOCUMENTS/Premsukh_Goyal_resume_latest.pdf" class="btn btn-primary" download>Download Resume</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+{% comment %} resume {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+<script>
+AOS.init();
+</script>
+<script>
+    // for loader
+var tl =gsap.timeline()
+
+function time(){
+    var a=  0;
+    setInterval(function(){
+        a= a + Math.floor(Math.random()*20)
+        if (a<100){
+            document.querySelector("#loader h1").innerHTML=a+"%"
+        }
+        else {
+            a = 100
+            document.querySelector("#loader h1").innerHTML = a+"%"
+        }
+        document.querySelector("#loader h1").innerHTML=a+"%"
+        console.log(a)
+    },150)
+}
+time()
+
+
+
+tl.to("#loader h1", {
+    scale:1.5,   
+    delay:0.5,
+    duration:1,
+    onStart:time()
+})
+
+gsap.to("#loader", {
+    top:"-100vh",
+    delay:2,
+    duration:2.5,
+})
+
+
+
+
+        // CURSOR ANIMATE
+var cursor = document.querySelector("#cursor")
+var imageDiv = document.querySelector("#image")
+        
+
+main.addEventListener("mousemove", function(dets){
+    gsap.to(cursor,{
+        x:dets.x,
+        y:dets.y,
+        duration: 0.7,
+        // ease:"back.out"
+    })
+})
+
+
+imageDiv.addEventListener("mouseenter",function(){
+    cursor.innerHTML = "ABOUT ME"
+    gsap.to(cursor,{
+        scale:4,
+        backgroundColor:"#c2c2c2"
+    })
+})
+
+imageDiv.addEventListener("mouseleave",function(){
+    cursor.innerHTML = ""
+    gsap.to(cursor,{
+        scale:2,
+        backgroundColor:"#fff"
+    })
+})
+
+
+
+// window.addEventListener("wheel",function(dets){
+//     if(dets.deltaY > 0){
+//         gsap.to(".marque",{
+//             transform:'translateX(-200%)',
+//             duration:2,
+//             repeat:-1,
+//             ease:"none"
+//         })
+//         gsap.to(".marque img",{
+//             rotate:180
+//         })
+//     } 
+//     else{
+//         gsap.to(".marque",{
+//             transform:'translateX(0%)',
+//             duration:2,
+//             repeat:-1,
+//             ease:"none"
+
+//         })  
+//         gsap.to(".marque img",{
+//             rotate:0
+//         })
+//     }
+// })
+
+
+
+
+
+
+</script>
+{% endblock %}
